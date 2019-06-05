@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>json</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style1.css">
+        <style>
+            ul{
+              display:grid;
+              grid-template-columns: auto auto auto auto;  
+            }
+            ul li{
+                list-style: none;
+                background-color: white;
+                box-shadow:0px 20px 40px ;
+            }
+            ul li img{
+                margin-left:20px;
+                margin-top: 14px;
+            }
+            ul li:hover{
+                background-color:orange;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="parent">
+
+        </ul>
+        <script>
+            function createNode(element)
+            {
+                return document.createElement(element);
+            }
+            function append(parent,el)
+            {
+                return parent.appendChild(el);
+            }
+             var ul=document.getElementById('parent');
+            fetch('https://randomuser.me/api/?results=15')
+            .then((resp)=>resp.json())
+            .then((json)=>{
+                console.log(json);
+                var data= json.results;
+                console.log(data);
+            
+                 var users=data.map((user)=>{
+                    console.log(user);
+                    var list=createNode('li');
+                    var name=createNode('p');
+                    var email=createNode('p');
+                    var mobile=createNode('p');
+                    var image=createNode('img');
+                    name.innerHTML= user.name.first +' '+ user.name.last;
+                    email.innerHTML=user.email;
+                    image.src=user.picture.large;
+                    append(list,image);
+                    append(list,email);
+                    append(list,name);
+                    append(list,mobile);
+                    append(ul,list);
+           
+                 });
+            });
+          
+        </script>
+    </body>
+</html>
