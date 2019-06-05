@@ -1,0 +1,53 @@
+<html>
+<head>
+ <title>Calculator</title>
+ <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+ <meta content="utf-8" http-equiv="encoding">
+ <style>
+     h1 {
+	margin: 1em 0 0.5em 0;
+	color: LightGray;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;   
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+}
+     h3 {
+	margin: 1em 0 0.5em 0;
+	color: LightGray;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 40px;
+	font-family: 'Orienta', sans-serif;
+}
+ </style>
+</head>
+<body style="background-color:black">
+   <center> <h1> Math Dyno</h1>
+    <h3>Calculator</h3> </center>
+ <form name="calci">
+     <center>
+     <input type="text" name="res" value=""> <br> <br>
+     <button type="button" onclick="document.calci.res.value+='1'">1</button>
+     <button type="button" onclick="document.calci.res.value+='2'">2</button>
+     <button type="button" onclick="document.calci.res.value+='3'">3</button>
+     <button type="button" onclick="document.calci.res.value+='+'">+</button><br><br>
+     <button type="button" onclick="document.calci.res.value+='4'">4</button>
+     <button type="button" onclick="document.calci.res.value+='5'">5</button>
+     <button type="button" onclick="document.calci.res.value+='6'">6</button>
+     <button type="button" onclick="document.calci.res.value+='-'">-</button><br><br>
+     <button type="button" onclick="document.calci.res.value+='7'">7</button>
+     <button type="button" onclick="document.calci.res.value+='8'">8</button>
+     <button type="button" onclick="document.calci.res.value+='9'">9</button>
+     <button type="button" onclick="document.calci.res.value+='*'">*</button><br><br>
+     <button type="button" onclick="document.calci.res.value+='0'">0</button>
+     <button type="button" onclick="document.calci.res.value+='/'">/</button>
+     <button type="reset" value="reset" name="reset">reset</button> 
+     <button type="button" onclick="document.calci.res.value=eval(document.calci.res.value)">=</button>
+
+ </center>
+ </form>
+ </body>
+</html>
