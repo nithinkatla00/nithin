@@ -1,0 +1,35 @@
+.parent{
+    width:400px;
+    margin:0 auto;
+    margin-top:100px;
+    box-shadow: 0px 20px 18px -4px solid black;
+    border:1px solid black;
+    
+}
+.child{
+    
+    background-color: rgba(214, 197, 197, 0.144);
+    padding:20px;
+}
+input{
+    margin-top:5px;
+    margin-bottom:10px;
+    width:90%;
+}
+label{
+    margin-top:10px;
+
+}
+.hi{
+    padding-left:20px;
+}
+#btn{
+    margin-top:20px;
+    /* text-align:center; */
+}
+#table,thead,td,tr{
+    border: 1px solid black;
+}
+body{
+    background-color:lightblue;
+}
