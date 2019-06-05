@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+   
+    <head>
+            <title>
+                    Form filling
+                </title>
+<link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <center><h1><u>Dynamic Table</u></h1></center>
+        <div class="parent">
+            <div class="child"> 
+            <label for="name" >Name</label><br>
+            <input type="text" class="hi" id="name"></input><br>
+            <label for="e-mail"  >E-mail</label><br>
+            <input type="text" class="hi" id="email"></input> <br>
+            <label for="mobile">Mobile no</label><br>
+            <input type="text" class="hi" id="num"></input><br>
+            <label for="college" >College</label><br>
+            <input type="text" class="hi" id="college"></input> <br>
+           <center> <button onclick="submit()" id="btn">Get</button>  </center>
+        </div>  
+    </div>
+        <div>
+            <table id="table"  class="parent">
+                <thead>
+                    <td>Name</td>
+                    <td>E-mail</td>
+                    <td>Mobile no</td>
+                    <td>College</td>
+                </thead>
+                <tr>    </tr>
+
+            </table>
+        </div>
+    
+    </body>
+    <script>
+    function submit(){
+        var name1 = document.getElementById('name').value,
+            email1 = document.getElementById('email').value,
+            number = document.getElementById('num').value,
+            college1 = document.getElementById('college').value;
+        save(name1,email1,number,college1);
+        console.log(document.getElementById('email').value);
+    }
+    function save(name1, email1,number,college1)
+    {
+         var table=document.getElementById('table');
+        var row = table.insertRow('1');
+        var col = row.insertCell('0');
+        var col1 = row.insertCell('1');
+        var col2 = row.insertCell('2');
+        var col3 = row.insertCell('3');
+        col.innerHTML=name1;
+        col1.innerHTML=email1;
+        col2.innerHTML=number;
+        col3.innerHTML=college1;
+    }
+    
+    </script>
+</html>
